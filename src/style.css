@@ -1,0 +1,160 @@
+/* title font */
+@font-face {
+  font-family: "retro-mono";
+  src: url(./fonts/retro-mono.woff2) format("woff2"),
+    url(./fonts/retro-mono.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* headline font */
+@font-face {
+  font-family: "sportypo";
+  src: url(./fonts/sportypo.woff2) format("woff2"),
+    url(./fonts/sportypo.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* regular text */
+
+@font-face {
+  font-family: "tektur";
+  src: url("./fonts/tektur.woff2") format("woff2"),
+    url("./fonts/tektur.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* listing font */
+
+@font-face {
+  font-family: "beyonders";
+  src: url("./fonts/beyonders.woff2") format("woff2"),
+    url("./fonts/beyonders.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: rgb(40, 0, 60);
+  place-items: center;
+}
+
+.blurred-bg {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#header h1 {
+  margin: 0;
+  font-family: "retro-mono";
+  font-size: 3rem;
+  font-weight: 400;
+  color: rgb(37, 255, 146);
+  animation: glow 5s infinite ease-in-out;
+}
+
+#header h2 {
+  font-family: "sportypo";
+  font-weight: 400;
+  text-shadow: 0 0 10px rgb(255, 255, 0);
+  color: rgb(255, 255, 70);
+}
+
+.button-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  padding: 10px 4px;
+  border: 3px solid #03a9f4;
+  border-radius: 10px;
+  background: radial-gradient(#0a224edb, #23074dd0);
+  box-shadow: 0 0 20px rgba(3, 169, 244, 0.7);
+}
+
+.button-nav button {
+  font-family: "tektur";
+  font-weight: bold;
+  padding: 3px 12px;
+  border: none;
+  border-radius: 10px;
+  background: radial-gradient(#ff6f00, #ff872c);
+  font-size: 1.125rem;
+  color: #aa00ff;
+  transition: all ease-in-out 0.2s;
+  box-shadow: 0 0 10px rgba(255, 136, 0, 0.8);
+}
+
+button:hover {
+  background: radial-gradient(circle, #ff6f00, #ff66b2);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 102, 178, 0.7);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  max-width: 75ch;
+  min-width: 70vh;
+  margin: 5px 10px 10px;
+  padding: 15px 10px;
+  border: 3px solid #03a9f4;
+  border-radius: 10px;
+  border-radius: 10px;
+  background: radial-gradient(#0a224edb, #23074dd0);
+  text-align: center;
+  box-shadow: 0 0 20px rgba(3, 169, 244, 0.7);
+  gap: 40px;
+}
+
+.content-area div p {
+  font-family: "tektur";
+  font-size: 1.125rem;
+  color: rgb(160, 255, 255);
+  text-shadow: 0 0 3px rgb(0, 255, 255);
+}
+
+.content-area div h1,
+.content-area h1 {
+  font-family: "beyonders";
+  font-size: 1.125rem;
+  color: rgb(37, 255, 146);
+  text-shadow: 0 0 10px rgba(0, 255, 128, 0.7);
+}
+
+.content-area div img {
+  width: 35%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 3px solid #aa00ff;
+  box-shadow: 0 0 20px rgba(255, 102, 178, 0.7);
+}
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 15px rgba(0, 255, 128, 0.7);
+  }
+
+  50% {
+    text-shadow: 0 0 25px rgba(0, 255, 128, 0.9);
+    transform: scale(1.04);
+  }
+}
